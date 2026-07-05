@@ -43,4 +43,3 @@ This dataset is **publicly available**.
 
 ---
 
-*This README was generated from a dataset comparison summary. Add sections for license, download/access instructions, file structure, and citation once finalized.*
