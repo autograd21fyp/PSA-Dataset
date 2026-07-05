@@ -1,0 +1,816 @@
+Question ID,Question,Probelm Statement
+s1_1,,"DEVELOP A PYTHON PROGRAM THAT TAKES A LIST OF POSITIVE INTEGERS SEPARATED BY COMMAS AS THE INPUT. FOR EACH INTEGER, THE PROGRAM SHOULD FIRST CONCATENATE THE NUMBER WITH ITSELF to PRODUCE ITS â€œDOUBLEâ€ AND THEN OUTPUT THE SUM OF ALL THESE DOUBLED NUMBERS. Example: Input: 1,26,73 Output: 10010 Explanation: Double of 1 is 11 Double of 26 is 2626 Double of 73 is 7373 total sum = 11 + 2626 + 7373 = 10010"
+s1_10,,"PROBLEM A positive integer X is called a HAPPY NUMBER if the following process ends in 1.  * Starting with X, replace the number by the sum of the squares of its digits.  * Repeat the process until the number equals 1, or IT LOOPS ENDLESSLY in a cycle without reaching 1. For example, 13 is a happy number because 12 + 32 = 10, and 12 + 02 = 1. On the other hand, 4 is not a happy number because the sequence starting with 42 = 16 and 12 + 62 = 37, â€¦, eventually gets us back to 22 + 02 = 4, where we started the sequence, and so the process continues in an infinite cycle without ever reaching 1. Develop a Python program that takes A FILENAME AS INPUT. The file contains a list of N â‰¥ 1 positive numbers, and outputs the UNIQUE HAPPY NUMBERS in the list. You must define and use at least one function in your program. HINT: The process will get into an endless loop if we reach a number which is one of 4, 16, 37, 58, 89, 145, 42, 20. INPUT FORMAT:The input file contains a list of N â‰¥ 1 positive integers separated by space on a single line. Note that a number may be repeated several times, i.e., numbers may be replicated. OUTPUT FORMAT:A single line containing one of the following:  * A space-separated list of UNIQUE HAPPY NUMBERS from the input list. The unique numbers should be listed in the order they first appeared in the input list.  * If there are no happy numbers in the input list, then output the string â€œNoneâ€. EXAMPLE: INPUT (CONTENTS OF FILE): 19 2 OUTPUT: 19 EXPLANATION:Input list has 2 numbers 19 and 2.  * Input number 19:  * 19 â†’ 12 + 92 = 82 â†’ 82 + 22 = 68 â†’ 62 + 82 = 100 â†’ 12 + 02 + 02 = 1  * Since the process reaches 1, 19 is a happy number.  * Input number 2:  * 2 â†’ 22 = 4 â†’ 42 = 16 â†’ 12 + 62 = 37 â†’ 32 + 72 = 58 â†’ 52 + 82 = 89 â†’ 82 + 92 = 145 â†’ 12 + 42 + 52= 42 â†’ 42 + 22 = 20 â†’ 22 + 02 = 4  * The sequence will be 2, 4, 16, 37, 58, 89, 145, 42, 20, 4, â€¦and repeated.  * This enters a never ending cycle 4, 16, 37, 58, 89, 145, 42, 20 that does not reach 1, so 2 is not a happy number."
+s1_11,,"PROBLEM: Develop a Python program that shifts alphabetic characters in a given string by a given positive integer, wrapping around within the alphabet. Non-alphabetic characters remain unchanged. Input consists of two lines: the first is the TEXT string, and the second is the integer specifying the SHIFT value. The text string will contain at least one character. HINT: You may use the ORD() and CHR() functions. EXAMPLE 1: INPUT: pyTHon 2 Output: raVJqp Explanation: Shift each letter in ""pyTHon"" by 2 positions: 'p' â†’ 'r' 'y' â†’ 'a' 'T' â†’ 'V' 'H' â†’ 'J' 'o' â†’ 'q' 'n' â†’ 'p'"
+s1_12,,"PROBLEM: Develop a Python program that takes a list of integers (separated by space) as input and checks if any number appears at least twice in the list. If any number appears more than once, the program should output True; otherwise, output False. HINT: The list sort( ) function may be useful. If A is a list, then A.sort( ) will sort its contents. EXAMPLE: Input: 3 1 4 2 5 3 Output: True"
+s1_13,,"PROBLEM: Develop a Python program that takes a sentence as input and outputs the length of the longest word in the sentence. Assume that the sentence contains at least one word, words are separated by spaces and a word contains only alphabetical characters (a-z and A-Z). Example: Input: I love coding Output: 6 Explanation: There are 3 words here: â€œIâ€, â€œloveâ€ and â€œcodingâ€ and the longest word is â€œcodingâ€ whose length is 6. So 6 is the output."
+s1_14,,"PROBLEM: Develop a Python program that takes a string of words as input and reverses each word in the string while maintaining the original order of the words. The words in the input are separated by space. Assume that the input contains at least one word, and a word contains at least one character. Finally output the modified string. You are not allowed to use the REVERSED( ) built-in function or the LIST.REVERSE( ) method. EXAMPLE 1: INPUT: ""Hello World"" OUTPUT: ""olleH dlroW"" EXAMPLE 2: INPUT:â€œI was abaâ€ OUTPUT: â€œI saw abaâ€"
+s1_15,,"Problem: Develop a Python program to take as input a list A of n integers (n â‰¥ 1) and output a list B of n binary numbers (0s and 1s). For each integer A[i] in list A, you will compare it to the sum of its immediate left and right neighbours to decide the corresponding value B[i] in B. Specifically:  * If A[i] is greater than (A[i-1] + A[i+1]), the sum of its left and right neighbours, then B[i] = 1.  * Otherwise B[i] = 0.  * Special case: When i=0, there is no A[i-1], so assume the left neighbour is 0.  * Special case: When i=n-1, there is no A[i+1], so assume the right neighbour is 0. Finally, output the list B. The input list A is given as a space-separated list of integers, where its length n â‰¥ 1. Example 1: Input:15927378← list A Output : 00101001← list B Explanation : First Element, i=0, A[0] is 1: -Left neighbour: 0 (since it has no left neighbour) - Right neighbor: 5 - Sum of neighbors: 0 + 5 = 5 - Comparison: 1 is not greater than 5 â†’ Output, B[0] is 0 Second Element, i=1, A[1] is 5: - Left neighbor: 1 - Right neighbor: 9 - Sum of neighbors: 1 + 9 = 10 - Comparison: 5 is not greater than 10 â†’ Output, B[1] is 0 Last Element, i=7, A[7] is 8: - Left neighbor: 7 - Right neighbour: 0 (since it has no right neighbour) - Sum of neighbours: 7 + 0 = 7 - Comparison: 8 is greater than 7 â†’ Output, B[7] is 1"
+s1_16,,"Problem: Given a nxn square matrix of integers as the input, develop a Python program to calculate and output the absolute difference between the sum of its primary diagonal elements and the sum of its secondary diagonal elements. Input Format:  * The input has n+1 lines  * The first line contains a single integer n, the size of the matrix (n x n).  * The next n lines each contain n space-separated integers representing the matrix. Example: Input: 3 112 4 456 108-12 Output: 15 EXPLANATION: The sum of the primary diagonal elements = 11+5+(-12)=4. The sum of the secondary diagonal elements = 4+5+10=19. Therefore the absolute difference between the two sums=|19 - 4| = 15, which is the output."
+s1_17,,"Problem: You are given as input a list of distinct integer numbers separated by commas. The numbers are in a continuous range [min_value, max_value], but one number from this range is missing in the input list. The min_value is the minimum number in the input list, and the max_value is calculated as min_value + length of the list. Develop a Python program to find and outputthe missing number. Assume that the input contains at least one number and that 0 and negative numbers are valid inputs. An incomplete Python program for this task has been provided to you. You may use it to complete the program if you want. Example 1: Input: 4,2,1 Output: 3 Explanation:  * min_value = 1  * max_value = 1 + length = 1 + 3 = 4  * from the range [1, 4], 3 is the missing number in the input list.  * Thus 3 is output."
+s1_18,,"PROBLEM: SUM OF NUMBERS DIVISIBLE BY A GIVEN NUMBER You are given a list L of positive integers and another positive integer n as input. Develop a Python program to find in L all numbers that are divisible by n and then output the sum of those numbers. INPUT: There are two lines of input, as follows:  * The first line: a list, L, of positive integers separated by spaces; L has at least one number.  * The second line: a single integer n, where n â‰¥ 1. OUTPUT: The sum of all numbers in the list L that are divisible by n. EXAMPLE: INPUT: 123 456 789 103 250âŸ¶ the list L of integers 3âŸ¶ n=3 OUTPUT: 1368 Explanation: In the list L, the numbers divisible by n=3 are 123, 456 and 789. The sum of those numbers = 123 + 456 + 789 = 1368. So 1368 is the output."
+s1_2,,"Develop a Python program that takes a positive integer as input. For each digit of the input number, compute its square, concatenate these squared values together in reverse order, and output the resulting number. The output number should not have a leading zero (0 should not appear as the first digit in the output).The input can have leading zeros and will have at least one non-zero digit . EXAMPLE 1:  * Input: 4250  * Output: 25416  * Explanation: Reversed Squares: 02 52 22 42 â†’ Concatenate: 025416â†’ Drop leading zeros 25416 EXAMPLE 2:  * Input: 08326  * Output: 3649640  * Explanation: Reversed Squares: 62 22 32 82 02 â†’ Concatenate:3649640"
+s1_3,,"Develop a Python program to take as input an array (list) of integers and another integer K and rotate the array K number of times. Rotating K times means shifting the elements of the array by K positions. Here is how to perform the rotation:  * If K is positive, perform left rotation K times. If K is negative perform right rotation |K| times.  * LEFT ROTATION: Shift every element of the array to THE LEFT BY ONE POSITION, while moving the first element to the end of the array. For example [1, 2, 3, 4] becomes [2, 3, 4, 1].  * RIGHT ROTATION: Shift every element of the array to THE RIGHT BY ONE POSITION, while moving the last element to the beginning of the array. For example [1, 2, 3, 4] becomes [4, 1, 2, 3]. Input format: There will be two lines of input, as follows:  * First line contains the array as a space separated list of N integers, 5 ≤ N ≤ 100.  * Second line contains the value of K, where -N ≤ K ≤N . Output format: Rotated array, as a space separated list of its elements Example 1 :  * Input: 1 2 3 4 5 6 7 8 9 2  * Output: 3 4 5 6 7 8 9 1 2  * Explanation: K = 2, this means perform the left rotation of [1, 2, 3, 4, 5, 6, 7, 8, 9]two times. After the first left rotation we have: [2, 3, 4, 5, 6, 7, 8, 9, 1] After the second left rotation we have: [3, 4, 5, 6, 7, 8, 9, 1, 2] Example 2 :  * Input: 1 2 3 4 5 6 7 8 9 -4  * Output: 6 7 8 9 1 2 3 4 5  * Explanation: K = -4, this means perform the right rotation of [1, 2, 3, 4, 5, 6, 7, 8, 9] four times."
+s1_4,,"PROBLEM The COLLATZ CONJECTURE is a sequence of integers defined as follows:  * Start with any positive integer  * Let n be the current number  * If n is even, divide it by 2 to get the next number  * If n is odd, multiply it by 3 and add 1 to get the next number  * Repeat the above process until n becomes 1 Develop a Python program that takes a positive integer n as input and outputs the number of steps required to reduce n to 1 by following the Collatz sequence. EXAMPLE: INPUT: 6 OUTPUT: 8 EXPLANATION: 6 â†’ 3 â†’ 10 â†’ 5 â†’ 16 â†’ 8 â†’ 4 â†’ 2 â†’ 1. It takes 8 steps to reduce 6 to 1."
+s1_5,,"PROBLEM: Develop a Python program that takes a sentence as input and outputs the length of the longest word in the sentence. Assume that the sentence contains at least one word, words are separated by spaces and a word contains only alphabetical characters (a-z and A-Z). Example: Input: I love coding Output: 6 Explanation: There are 3 words here: â€œIâ€, â€œloveâ€ and â€œcodingâ€ and the longest word is â€œcodingâ€ whose length is 6. So 6 is the output."
+s1_6,,"Problem: Develop a Python program that takes as input a NxN matrix A and outputs the same matrix with the position of some rows changed. Note that rows and columns are numbered 0,1,..., N-1. Process the rows top to bottom, starting with row=0 and ending at row=N-2:  * For row=I, compare the element A[I, I] with the largest element A[X, I] in the same column I in rows X= I+1 to N-1  * If the largest element A[X,I] > A[I,I], then swap (interchange) the row I with row X. The input matrix A is given on N+1 lines as follows. The first line contains the value N; where Nâ‰¥ 2. The next N lines are the rows of the matrix, each line contains a list of N integers separated by space. Example: Input: 4 1 12 8 9 5 136 3 274 5 089 7 Output: 5 1363 1 12 89 0897 2745 Explanation: N=4 and Input matrix Ais as follows: 1 12 8 9 5 136 3 274 5 089 7  * Process rows I=0, 1, 2 in that order as follows  * I=0, then A[0,0]=1:  * The largest element in column I=0 from rows I+1=1 to N-1=3 is 5  * This largest element 5 is in row X=1, and A[X,I]> A[I,I], therefore swap the row I=0 with the row X=1. Now the changed matrix A will be: 5 136 3 1 12 8 9 274 5 089 7  * I=1, then A[1,1]=12  * The largest element in column I=1 from rows I+1=2 to N-1=3 is 8.  * This largest element 8 is in row x=3, but A[X,I] < A[I,I], therefore no swapping of rows I=1 and X=3. The matrix A will not change.  * I=2, then A[2,2]=4:  * The largest element in column I=2 from rows I+1=3 to N-1=3 is 9.  * This largest element 9 is in row X=3, and A[X,I] > A[I,I], therefore swap the row I=2 with the row X=3. Now the changed matrix A will be: 5 136 3 1 12 8 9 089 7 274 5  * Done, now output the matrix A.Â"
+s1_7,,"PROBLEM: SIDES OF TRIANGLE You are given as inputs the lengths of the sides of N valid or invalid triangles, N â‰¥ 1. Develop a Python program to identify which of them are valid and invalid using the triangle inequality theorem. If the lengths of the sides satisfy the triangle inequality theorem, then it is a valid triangle, otherwise it is invalid. TRIANGLE INEQUALITY THEOREM: The sum of the lengths of any two sides of a triangle must be greater than the length of the third side. INPUT FORMAT: There are n+1 lines of input, as follows:  * The first line contains an integer n â‰¥ 1, the number of triangles.  * The next n lines each contain three space separated integers, representing the lengths of the three sides of a triangle (assume that the same triangle will not be repeated in the input). OUTPUT FORMAT:  * First, output the sides of the valid triangles, then the sides of the invalid triangles, in the order they appeared in the input.  * If only either valid or invalid triangles exist, then only output the existing set. EXAMPLE: Input: 3 2 3 4 3 4 9 7 3 4 Output: Valid Triangles: 2 3 4 Invalid Triangles: 3 4 9 7 3 4 Explanation:  * 2+3 > 4 and 3+4 > 2 and 4+2 > 3 =>Triangle inequality theorem is satisfied (this means it is possible to draw a triangle with sides length 2, 3, and 4). So this is a valid triangle.  * 3+4 < 9 =>Triangle inequality theorem is not satisfied  * 3+4 = 7 => Triangle inequality theorem is not satisfied (the three points lie on a straight line, not a true triangle)"
+s1_8,,"You are given a list of N unique integers and another integer T as input. Develop a Python program to find and print all pairs of integers in the list that add up to T, the TARGET SUM. Each pair should be printed in NON-DECREASING order (i.e., the smaller number first). If there are multiple pairs, then the pairs SHOULD BE ORDERED SUCH THAT THE FIRST NUMBERS OF ALL PAIRS FOLLOW THE ORDER AS THEY APPEARED IN THE INPUT (see the Example below). HINT: You may use the _list_._sort_( ) function to arrange the integers in each pair in non-decreasing order before printing them. INPUT FORMAT: There are two lines of input, as follows  * The FIRST LINE contains the list of N space-separated integers, where N â‰¥ 2. There will be no duplicates in the list.  * The SECOND line contains an integer T, the TARGET SUM. Output format:  * Each pair of integers that add up to the target sum T is printed on a NEW LINE.  * Each integer pair should be printed as A B (separated by space) and they are in NON-DECREASING ORDER; that is, A ≤ B.  * Multiple pairs should be ordered such that the FIRST NUMBERS OF ALL PAIRS FOLLOW THE ORDER AS THEY APPEARED IN THE INPUt. Example:  * Input: 2 4 3 5 7 8 9  * Output: 2 7 4 5  * Explanation:  * The pairs (2, 7) and (4, 5) add up to 9. The pair (2, 7) is printed first because 2 appears before 4 in the input. Each pair is printed in NON-DECREASING ORDER,the SMALLER NUMBER FIRST, e.g., the first pair is output as â€œ2 7â€ not as â€œ7 2â€ and the second pair is output as ""4 5"" not as ""5 4""."
+s1_9,,"Develop a Python program to read a list of data items (of different types) from a file and categorize (group) them based on their type. The list will contain only (a) integer numbers, (b) floating point numbers, (c) words (strings of alphabetical characters), and, (d) lists. The program should identify these four different types of data and group the data of the same type together. Finally the data items in these four groups are output in the (a), (b), (c), (d) order. If there aren't any items in a group you can skip (avoid) that group in the output. Your program must define and use at least one function. The name of the file that contains the list of data items must be provided as input to the program. Note that when you read from a file the data is in the string format. Code for converting them into relevant data types is provided below. INPUT: A text file containing a list of data items separated by space. Data items can be integer numbers, floating point numbers, words (strings of alphabetical characters), or lists (and nothing else). OUTPUT: Output data grouped into integers, floats, words and lists, in that order, each group in one line. Within each data type, data items should be ordered in the order as they appeared in the input. EXAMPLE 1 INPUT: input.txt(name of file) CONTENTS OF INPUT.TXT FILE: 1 2.3 1 apple [1,2,3] 6 apple 8 banana 5.6 ['a','b'] OUTPUT: [1, 1, 6, 8] [2.3, 5.6] ['apple', 'apple', 'banana'] [[1, 2, 3], ['a', 'b']] # CODE FOR CONVERTING DATA to APPROPRIATE TYPES # â€”---------------------------------------------------------- # Let data be the list of input items after reading them from the file # For example if the file contained: â€œ1 2 apple [1,2,2]â€ # Then data = [â€˜1â€™,â€™2â€™,â€™appleâ€™,â€™[1,2,2]â€™] converted_data = [] for item in data: item = item.strip() if item.startswith(""["") and item.endswith(""]""): item = eval(item)# Convert string of list to actual list else: try: item = int(item) except ValueError: try: item = float(item) except ValueError: pass converted_data.append(item)"
+,,
+s3_1,M1,"Emma has a small workshop where she organizes items on shelves. Each item has a unique weight, represented as an integer. To improve efficiency, she needs to rearrange the items so that the shelves are perfectly balanced. A balanced shelf minimizes the sum of absolute differences between weights of consecutive items. Emma can swap the positions of any two items on a shelf as many times as needed. Your task is to determine the minimum number of swaps required to rearrange the items in the most balanced order.
+
+Example Emma made the following swaps starting from the given weight arrangement [7, 15, 12, 3] to achieve a balanced arrangement [3, 7, 12, 15]
+
+    Swap      Result
+          [7, 15, 12, 3]
+    3 7   [3, 15, 12, 7]
+    7 15  [3, 7, 12, 15]
+This took 2 swaps, which is the minimal number needed.
+
+Function Description Complete the rearrangeWorkshop function in the editor below.
+
+rearrangeWorkshop has the following parameter(s):
+
+int items[n]: an array of integers representing item weights.
+Returns:
+
+int: the minimum number of swaps required to balance the shelf.
+Input Format
+
+The first line contains a single integer, n, the number of items on the shelf.The second line contains n space-separated integers, arr[i], the weights of the items.
+
+Constraints
+
+1 ≤ n ≤ 10⁵
+1 ≤ arr[i] ≤ 2×10⁹
+Output Format
+
+Output should be an integer
+
+Sample Input 0
+
+4
+2 5 3 1
+Sample Output 0
+
+2
+Sample Input 1
+
+5
+3 4 2 5 1
+Sample Output 1
+
+2
+"
+s3_2,M2,"Jordan has a list of unique projected car prices for the next several years. He need to purchase the car in one year and sell it in another at a lower price. Jordan's goal is to keep the financial loss as small as possible.
+
+Example
+
+price = [20, 15, 8, 2, 12]
+
+His minimum loss is incurred by purchasing in year 2 at price[1] = 15 and reselling in year 5 at price[4] = 12. Return 15 - 12 = 3.
+
+Function Description
+
+Complete the smartCarTrade function in the editor below.
+
+Parameters
+
+int prices[n]: A list of car prices for consecutive years.
+Returns
+
+int: The minimum loss Jordan can make.
+Input Format
+
+The first line contains an integer, n, the number of years of price data. The second line contains n space-separated long integers, each representing the car price[i].
+
+Constraints
+
+2 ≤ n ≤ 2 × 10⁵
+1 ≤ price[i] ≤ 10¹⁶
+All the prices are distinct.
+A valid answer exists.
+Subtasks
+
+2 ≤ n ≤ 1000 for 50% of the maximum score.
+Output Format
+
+The output is a single integer, which represents the smallest financial loss Jordan can incur.
+
+Sample Input 0
+
+3
+5 10 3
+Sample Output 0
+
+2
+Sample Input 1
+
+5
+20 7 8 2 5
+Sample Output 1
+
+2
+"
+s3_3,E1,"Two friends are pooling their money to buy groceries from a store. The store offers various grocery items with different prices. The friends have a fixed amount of money they want to spend, and they need to select exactly two distinct items whose prices add up to that amount.
+
+Given a list of prices for the grocery items, select the two items that will cost exactly the total amount they have pooled together.
+
+Example: money = 6 cost = [2,3,4,5,6]
+
+The two flavors that cost 2 and 4 meet the criteria. Using 1-based indexing, they are at indices 1 and 3.
+
+Function Description Complete the function groceryShopping that will take the following parameters:
+
+int m: the amount of money the friends have pooled together.
+int cost[n]: a list of integers representing the price of each grocery item.
+Returns:
+
+int[2]: the indices of the prices of the two flavors they buy, sorted ascending
+Input Format
+
+The first line contains an integer, t, the number of grocery shopping trips.The next sets of lines each describe a visit.
+
+Each trip is described as follows:
+
+The integer m, the total amount of money they have pooled.
+The integer n, the number of grocery items available at the store.
+A list of n space-separated integers representing the prices of the grocery items: cost [cost[1],cost[2],....,cost[n]]
+Constraints
+
+1 ≤ t ≤ 50
+2 ≤ m ≤ 10⁴
+2 ≤ n ≤ 10⁴
+1 ≤ cost[i] ≤ 10⁴, ∀ i ∈ [1,n]
+There will always be a unique solution.
+Output Format
+
+For each trip, print a single line containing two space-separated integers. These integers represent the 1-based indices of the two grocery items whose prices add up to the total amount the friends have pooled. The indices should be printed in ascending order.
+
+Sample Input 0
+
+2
+4
+5
+1 4 5 3 2
+4
+4
+2 2 4 3
+Sample Output 0
+
+1 4
+1 2
+"
+s3_4,E2,"You are given a list of unique integers. Your task is to:
+
+Identify the pair of numbers with the smallest absolute difference.
+If there are multiple pairs with the same smallest absolute difference, select the pair that has the maximum absolute sum.
+If there is only one pair with the smallest absolute difference, return the absolute sum of that pair.
+The final output should be the absolute sum of the selected pair
+
+Example Given a list of unsorted integeres: [30, -20, 15, -25, 35]
+
+After sorting: [-25, -20, 15, 30, 35]
+
+The closest pairs of integers (with the smallest absolute difference) are: [-25, -20] and [30, 35], as their absolute differences are both 5.
+
+The absolute sum of these pairs is calculated as:
+
+For [-25, 20] : |-25| + |20| = 45
+For [30, 35] : |30| + |35| = 65.
+Return the maximum absolute sum : 65
+
+Function Description
+
+Complete the closestPairSum function in the editor below.
+
+closestPairSum has the following parameter(s):
+
+int arr[n]: An array of integers.
+Returns:
+
+int: The absolute sum of the selected pair
+Input Format
+
+The first line contains a single integer, n, the length of arr. The second line contains n space-separated integers, arr[i].
+
+Constraints
+
+2 ≤ n ≤ 200000
+-10⁷ ≤ arr[i] ≤ 10⁷
+All arr[i] are unique.
+Sample Input 0
+
+10
+-20 -3916237 -357920 -3620601 7374819 -7330761 30 6246457 -6461594 266854
+Sample Output 0
+
+50
+Sample Input 1
+
+5
+-5 15 25 71 63
+Sample Output 1
+
+134
+"
+s3_5,Minimum Cost Path using Uniform Cost,"You are given an undirected weighted graph consisting of n nodes and m edges, along with a designated start node s and a goal node g. Your task is to compute the minimum cost required to travel from node s to node g.
+If the goal node g is not reachable from the start node s, your program should return -1.
+If there are multiple edges between the same pair of nodes, only the edge with the smallest weight should be considered.
+
+
+Function Description
+Complete the findMinCostPath function in the editor below.
+findMinCostPath has the following parameter(s):
+int n : the number of nodes in the graph
+int m : the number of edges
+2D_INTEGER_ARRAY edges : a list of m triplets [u, v, w], each representing an undirected edge between nodes u and v with weight w
+int start : the starting node s
+int goal : the target node g
+Returns:
+int : the minimum cost to travel from start to goal using Uniform Cost Search, or -1 if goal is unreachable from start.
+ 
+Input Format
+The input consists of multiple test cases.
+The first line contains an integer t - the number of test cases.
+For each test case:
+The first line contains two integers n and m - the number of nodes and edges, respectively.
+The next m lines each contain three integers: ui, vi, and wi, representing an undirected edge between nodes ui and vi with a weight wi.
+The final line contains two integers: s (start node) and g (goal node).
+ 
+Constraints
+1 ≤ t ≤ 10
+2 ≤ n ≤ 3,000
+1 ≤ m ≤ n × (n − 1) / 2
+1 ≤ ui, vi, s, g ≤ n
+1 ≤ wi ≤ 10⁵
+Output Format
+For each test case, output a single integer - the minimum cost to reach node g from node s. If g is not reachable, output -1.
+Sample Input 0
+1
+5 6
+1 2 2
+1 3 5
+2 3 1
+2 4 2
+3 5 3
+4 5 1
+1 5
+Sample Output 0
+5
+"
+s3_6,Zombie Infection Spread,"In a grid-based city, some cells contain zombies (marked Z), some are walls (W), and others are humans (H). Zombies infect adjacent (up, down, left, right) humans every hour. Write pseudo-code to compute the minimum time it takes for all humans to be infected, or return -1 if not all can be infected.
+
+
+Input Format
+n m
+grid[0]
+grid[1]
+...
+grid[n-1]
+ 
+Where:
+n and m are integers representing rows and columns
+Each grid[i] is a string of m characters (Z, H, W)
+
+
+Output Format
+integer
+Minimum time to infect all humans or -1 if not all can be infected.
+ 
+Example
+Input:
+4 5
+ZZHHW
+HHWHH
+WWWWH
+HHHHZ
+ 
+Explanation:
+Z Z H H W
+H H W H H
+W W W W H
+H H H H Z
+There are 3 zombies (Z) initially: top-left (0,0), (0,1), and bottom-right (3,4).
+Infection spreads each hour to adjacent humans (H).
+Walls (W) block spread.
+You must compute the minimum hours needed to infect all H.
+
+
+Output:
+4
+"
+s3_7,Count the Islands,"You are given an n x m grid consisting of characters 'L' (land) and 'W' (water). An island is formed by a group of 'L' cells that are connected horizontally, vertically, or diagonally. Islands are surrounded by 'W' or the grid boundary.
+
+Your task is to count the number of distinct islands in the grid.
+
+Write the pseudocode and corresponding Python implementation for the given problem.
+
+Input Format:
+The first line contains an integer N- the number of rows.
+
+The second line contains an integer M the number of columns.
+
+The next N lines each contain M space-separated characters ('L' or 'W') representing one row of the grid.
+
+Output Format:
+Print a single integer - the number of islands in the grid.
+
+Sample Input 1:
+
+5
+5
+[['L', 'L', 'W', 'W', 'W'],
+ ['W', 'L', 'W', 'W', 'L'],
+ ['L', 'W', 'W', 'L', 'L'],
+ ['W', 'W', 'W', 'W', 'W'],
+ ['L', 'W', 'L', 'L', 'W']]
+
+Sample Output 1:
+
+4"
+s3_8,Shortest Paths in Graphopolis,"The city of Graphopolis is built on a network of roads connecting important districts. Each district is a node, and each road has a certain travel time. Unfortunately, not every district is directly connected some are only reachable by passing through others, and a few might be completely isolated.
+The city mayor wants to improve emergency response times and has asked you to figure out the shortest travel time from a chosen district (the starting point) to all the other districts. If a district cannot be reached from the starting one, you must report -1.
+Sometimes, there may even be multiple roads between the same two districts, each with different travel times. In such cases, consider them all as valid roads.
+Your task is to analyze the map of Graphopolis, given as a list of roads between districts with their travel times, and compute the shortest distances.
+
+
+Begin   End  Weight
+1      2      5
+2      3      6
+3      4      2
+1      3      15
+ 
+Function Description
+Complete the function shortestReach in the editor below. It should return an array of integers that represent the shortest distance to each node from the start node in ascending order of node number.
+shortestReach has the following parameter(s):
+n: the number of nodes in the graph
+edges: a 2D array of integers where each edges[i] consists of three integers that represent the start and end nodes of an edge, followed by its length
+s: the start node number
+ 
+Input Format
+The first line contains t, the number of test cases.
+Each test case is structured as follows:
+The first line contains two space-separated integers n and m, the number of nodes and edges in the graph.
+Each of the next m lines contains three space-separated integers x, y, r, describing an undirected edge between nodes x and y with length r.
+The last line of each test case contains an integer s, denoting the starting district.
+ 
+Output Format
+For each test case, print a single line containing n – 1 space-separated integers, where the i-th integer represents the shortest distance from the starting node to node i (skipping the starting node itself). If a node is unreachable, print -1 instead.
+ 
+Constraints
+
+2 ≤ n ≤ 3000
+
+
+
+
+If there are edges between the same pair of nodes with different weights, they should be treated as separate roads.
+Example
+Input :-
+1
+1 2 5
+2 3 6
+3 4 2
+1 3 15
+1
+Output :-
+5 11 13 -1
+Explanation:
+From node 1 → node 2: direct path with distance 5.
+From node 1 → node 3: either direct edge (15) or through node 2 (5 + 6 = 11), so the shortest is 11.
+From node 1 → node 4: via 1 → 2 → 3 → 4 with distance 5 + 6 + 2 = 13.
+Node 5 is unreachable, so -1.
+"
+s3_9,"Word Ladder Transformation
+","Given a startWord, an endWord, and a dictionary of valid words, write pseudo-code to find the minimum number of transformations to convert the startWord into the endWord, changing only one letter at a time, and each intermediate word must exist in the dictionary.
+
+Example 1:
+Input: beginWord = ""hit"", 
+endWord = ""cog"", 
+wordList = [""hot"",""dot"",""dog"",""lot"",""log"",""cog""]
+
+Output: 4
+Explanation: 
+One shortest transformation sequence is 
+""hit"" -> ""hot"" -> ""dot"" -> ""dog"" -> cog"", 
+There is 4 transformations.
+ 
+Example 2:
+Input: beginWord = ""hit"", 
+endWord = ""cog"", 
+wordList = [""hot"",""dot"",""dog"",""lot"",""log""]
+
+Output: 0
+Explanation: The endWord ""cog"" is not in wordList, therefore there is no valid transformation sequence.
+
+For example:
+Input
+Result
+hit cog
+6
+hot
+dot
+dog
+lot
+log
+cog
+4
+
+"
+s3_10,The Quietest Way Out,"You’re in a maze where every room emits a tone (a non-negative integer). The softer the tone, the closer you feel to the Exit. Starting at the Start room, you must reach the Exit by always choosing to explore the next most promising room you've discovered, based on its tone.
+
+If multiple rooms are equally promising, choose the one whose name comes first in lexicographic order.
+
+Find a path from Start to Exit following the above selection rule. Once you reach the Exit, reconstruct and print the path from Start to Exit. If no path exists, print -1.
+
+
+Input format
+
+
+N M
+name_1 name_2 ... name_N
+tone_1 tone_2 ... tone_N
+M lines: u v                 # undirected edges between room names u and v
+Start Exit                    # room names
+
+
+Output format
+If reachable: print the path as room names from Start to Exit, space-separated.
+Otherwise: print -1.
+
+
+Constraints
+
+
+2 ≤ N ≤ 2⋅10^5, 1 ≤ M ≤ 2⋅10^5
+Room names are unique non-empty strings without spaces (may include letters/digits).
+0 ≤ tone_i ≤ 10^9
+The graph is undirected; there are no weights.
+Multiple valid paths may exist; your selection order must follow the policy above to be deterministic.
+
+
+Sample input
+
+
+7 8
+A B C D E F G
+12 7 6 5 3 9 1
+A B
+A C
+B D
+C D
+C E
+D F
+E G
+F G
+A G
+
+       B(7)
+          /        \
+     A(12)     D(5)───F(9)
+          \        /      \
+           C(6)───E(3)────G(1)  ← Exit
+
+Sample output (one valid)
+
+
+A C E G
+
+Implement your pseudocode here
+"
+s3_11,Escape from the Enchanted Maze,"Deep in the heart of the ancient kingdom lies the Enchanted Maze, a sprawling labyrinth filled with magical traps, hidden passages, and walls that shift mysteriously. Many adventurers have entered in search of the legendary Crystal of Eternal Light - none have returned.
+
+You are Liora, a cunning explorer who has finally obtained a magical map of the maze that shows the current layout of the maze, all safe paths, traps, and barriers, exactly as they are when you start your journey. The maze will not change while you search.
+
+Your task  :-  Reach the Crystal chamber in the least possible time.
+
+Maze Rules
+
+The maze is represented as a grid of cells:
+
+'.' - safe path, you can walk here.
+
+'T' - trap, slows you down but still passable.
+
+'#' - magical barrier, impassable.
+
+Movement
+
+You may move up, down, left, or right (no diagonals).
+
+Entering '.' costs 1 unit of time.
+
+Entering 'T' costs 3 units of time.
+
+You cannot pass through '#'.
+Heuristic function
+
+Use the Manhattan distance from the current cell to the goal cell, assuming that each move costs 1.
+
+Input Format
+
+First line: Two integers N and M - maze dimensions.
+
+Next N lines: Maze grid (strings of length M).
+
+Next line: Two integers start_x and start_y - your starting position (0-indexed).
+
+Last line: Two integers crystal_x and crystal_y - Crystal’s position (0-indexed).
+
+Output Format
+
+Single integer - minimum time needed to reach the Crystal.
+
+If unreachable, output -1.
+
+Constraints
+
+1 ≤ N, M ≤ 1000
+
+Start and Crystal cells are either '.' or 'T'.
+
+The map given matches the maze exactly at the moment of navigation. "
+s3_12,Timetable Scheduling,"You are preparing the academic timetable for the Department of CSE. There are  N  classes and a small set of  S  available time slots (numbered  0  to  S−1 ). Some pairs of classes cannot run at the same time, as they share teachers or have overlapping student groups. These pairs are listed as incompatible. Additionally, some classes have their time slots pre-assigned and cannot be changed. 
+We call these fixed classes; they serve as anchors for the timetable. 
+
+Your task is to assign every class to one of the S slots so that: 
+●  There are no conflicts: no incompatible pair is in the same slot. 
+●  All fixed classes remain in their assigned slots.
+
+It is guaranteed that: 
+●  At least one zero-conflict assignment exists for every test case. 
+●  Because of the fixed-class constraints, the valid assignment is unique  . 
+
+Input Format 
+T 
+N S M F 
+M lines each: u v      # incompatible pair (0 ≤ u < v < N) 
+F lines each: x k   # fixed class x must be in slot k (0≤x<N,0≤k<S)
+
+Where:
+
+T  - number of test cases 
+N  - number of classes 
+S  - number of available time slots 
+M  - number of incompatible pairs 
+F  - number of fixed classes 
+
+Output Format 
+For each test case, print: a0 a1 ... a{N-1} where ai is the assigned slot for class i. 
+
+Constraints 
+●  1 ≤ T ≤ 20 
+●  1 ≤ N ≤ 2×10^5  (sum of N over all test cases ≤ 3×10^5) 
+●  1 ≤ S ≤ 20 
+●  0 ≤ M ≤ 4×10^5  (sum of M over all test cases ≤ 6×10^5) 
+●  0 ≤ F ≤ N 
+●  All fixed assignments are valid (no fixed classes share a slot with an incompatible fixed 
+class). 
+●  Inputs are constructed so there is exactly one zero-conflict assignment. 
+
+Sample input 
+1 
+6 3 9 3 
+ 0 1 
+ 0 2 
+ 0 4 
+ 1 3 
+ 1 5 
+ 2 3 
+ 2 5 
+ 3 4 
+ 4 5 
+ 0 0 
+ 1 1 
+ 2 2 
+
+ Sample output 
+ 0 1 2 0 1 2 
+
+ Explanation 
+ ●  Fixed anchors: Class 0 → slot 0, Class 1 → slot 1, Class 2 → slot 2. 
+ ●  Incompatibilities force all other classes to be in specific slots: 
+     ○  Class 3 → slot 0 
+     ○  Class 4 → slot 1 
+     ○  Class 5 → slot 2 
+ ●  This produces the only zero-conflict assignment possible."
+s3_13,The Clockwork Library Maze,"The Clockwork Library Maze
+You wake up inside the Clockwork Library, a magical maze full of walls, keys, doors and portals. Your task is to reach the Great Index (G) starting from the Starting Alcove (S) in the fewest possible moves.
+
+Rules of the Maze
+
+You can move one step at a time in the four directions: Up (U), Down (D), Left (L), Right (R). (No diagonal moves.)
+The maze grid uses the following symbols:
+
+Symbol
+
+Meaning
+
+#
+
+Wall – cannot pass through
+
+.
+
+Floor – free to walk
+
+S
+
+Start position
+
+G
+
+Goal
+
+a..z
+
+Keys – collect them when stepped on; you keep them forever
+
+A..Z
+
+Locked doors – can pass only if you already have the matching key (a opens A)
+
+p
+
+Pressure plate – toggles the brass gate P between open/closed (stays in the new state until toggled again)
+
+P
+
+Brass gate – initially closed, opens/closes when p is stepped on
+
+0..9
+
+Portals – stepping on one teleports you instantly to its matching twin (each digit appears exactly twice)
+
+You may revisit cells, reuse portals, and step on p multiple times.
+
+Input Format
+You are given multiple test cases.
+First line: integer T = number of test cases.
+For each test case:
+One line with: H W K
+H = grid height
+W = grid width
+K = number of ""rings"" (exploration levels) to report
+Next H lines: the maze grid (each line has W characters).
+
+Output Format
+
+For each test case, print three lines:
+
+Minimum moves – an integer: the fewest moves needed to reach G from S. Print -1 if unreachable.
+One optimal route – a string made of {U, D, L, R} describing one shortest path.
+Entering a portal counts as the move onto it; teleport happens instantly.
+If multiple optimal routes exist, output the lexicographically smallest under the order U < D < L < R.
+Print - if unreachable.
+Rings (exploration levels) – print K integers:
+The collection of all states that are exactly d moves away from the start are called the ring at distance d.
+K : how many of these rings you need to report.
+r0 r1 … r(K-1) where rd = number of distinct game states reachable in exactly d moves from S, where d ranges from 0 to K-1.
+A game state is defined by: (row, column, keysHeld, P_open?).
+Reaching the same cell with different keys or a different gate state counts as a different state.
+If the exploration depth of your solution is less than K-1, print 0 for missing values.
+For example,
+r0 = number of distinct states you can be in after 0 moves → always 1 (just the start).
+r1 = number of states you can be in after 1 move.
+r2 = number of states you can be in after 2 moves.
+and so on.
+Constraints
+
+1 ≤ T ≤ 10
+3 ≤ H, W ≤ 60
+Total cells across all tests ≤ 60,000
+Each portal digit (0..9) appears exactly twice
+Sample Input
+
+1
+11 15 6
+###############
+#S..p..#....G.#
+#.#.#.#.###.#.#
+#.#.#.#...#.#.#
+#.#.#.###.#.#.#
+#...#..a#.#.#.#
+###P###.#.#.#.#
+#..1A..#.#.#B1#
+#.#####.#.#.#.#
+#.....b.#.....#
+###############
+Sample Output
+
+17
+RRRLDDDDDDUUUUUUL
+1 2 2 3 4 7"
+s3_14,The Enchanted Catacombs,"You awaken in the Enchanted Catacombs, a labyrinth of shifting corridors, sealed runes, and magical gates.
+Your task is to reach the Sacred Archive (A) starting from the Entrance Chamber (E) in the fewest possible moves.
+
+Rules of the Catacombs
+
+You can move one step at a time in the four directions: North (N), South (S), West (W), East (E). (No diagonal moves.)
+
+The maze grid uses the following symbols:
+
+Symbol
+
+Meaning
+
+#
+
+Wall – cannot be crossed
+
+.
+
+Floor – free to walk
+
+E
+
+Entrance – starting position
+
+A
+
+Archive – goal position
+
+r..z
+
+Rune stones (lowercase letters) – collect them when stepped on; you keep them forever
+
+R..Z
+
+Rune-locked doors – can only be opened if you hold the matching rune (e.g., m opens M)
+
+t
+
+Trigger plate – toggles the obsidian gate O between open/closed (persists after toggle)
+
+O
+
+Obsidian gate – initially closed, toggles open/closed when t is stepped on
+
+0..9
+
+Magic mirrors (portals) – stepping on one instantly teleports you to its paired mirror (each digit appears exactly twice)
+
+You may revisit tiles, reuse mirrors, and step on triggers multiple times.
+
+Input Format
+
+Multiple test cases.
+
+First line: integer T = number of test cases.
+
+For each test case:
+
+You are given multiple test cases.
+First line: integer T = number of test cases.
+For each test case:
+One line with: H W K
+H = grid height
+W = grid width
+K = number of ""rings"" (exploration levels) to report
+Next H lines: the maze grid (each line has W characters).
+Output Format
+
+For each test case, print three lines:
+
+Minimum moves – the fewest moves needed to reach A from E. Print -1 if unreachable.
+One optimal route – a string made of {N, S, W, E} describing one shortest path.
+Entering a mirror counts as the move onto it; teleport happens instantly.
+If multiple optimal routes exist, output the lexicographically smallest under the order N < S < W < E.
+Print - if unreachable.
+Rings (exploration levels) – print K integers:
+The collection of all states that are exactly d moves away from the start are called the ring at distance d.
+K : how many of these rings you need to report.
+r0 r1 … r(K-1) where rd = number of distinct game states reachable in exactly d moves from S, where d ranges from 0 to K-1.
+A game state is defined by:
+A game state is defined as: (row, column, runesHeld, O_open?).
+Reaching the same cell with different keys or a different gate state counts as a different state.
+If the exploration depth of your solution is less than K-1, print 0 for missing values.
+For example,
+r0 = number of distinct states you can be in after 0 moves → always 1 (just the start).
+r1 = number of states you can be in after 1 move.
+r2 = number of states you can be in after 2 moves.
+and so on.
+Constraints
+
+1 ≤ T ≤ 10
+3 ≤ H, W ≤ 60
+Total cells across all tests ≤ 60,000
+Each mirror digit (0–9) appears exactly twice
+Sample Input
+
+1
+7 11 5
+###########
+#E..t..#A.#
+#.#.#.#.#.#
+#.#.#.o.#.#
+#O#.#.#.#.#
+#..1M..m1.#
+###########
+Sample Output
+
+14
+EEESSSWWNNNEEE
+1 2 3 4 5"
